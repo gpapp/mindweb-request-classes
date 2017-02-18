@@ -1,0 +1,11 @@
+.idea
+src/
+node_modules/
+typings/
+tsconfig,json
+*.d.ts
+*.log
+*.tgz
+
+!src/index.d.ts
+

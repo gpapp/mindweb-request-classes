@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="081fc37b-6009-4ba1-8759-e6b05912e4e1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mindweb-request-classes/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/../mindweb-request-classes/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mindweb-request-classes/.idea/misc.xml" afterPath="$PROJECT_DIR$/../mindweb-request-classes/.idea/misc.xml" />
+    <list default="true" id="081fc37b-6009-4ba1-8759-e6b05912e4e1" name="Default" comment="Fixed exports">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mindweb-request-classes/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mindweb-request-classes/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mindweb-request-classes/tsconfig.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mindweb-request-classes/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../mindweb-request-classes/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mindweb-request-classes/package.json" afterPath="$PROJECT_DIR$/../mindweb-request-classes/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,21 +23,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.d.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../mindweb-request-classes/index.d.ts">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../mindweb-request-classes/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../mindweb-request-classes/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+            <state relative-caret-position="492">
+              <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -78,6 +68,7 @@
         <option value="$PROJECT_DIR$/../mindweb-request-classes/package.json" />
         <option value="$PROJECT_DIR$/../mindweb-request-classes/src/index.d.ts" />
         <option value="$PROJECT_DIR$/../mindweb-request-classes/index.d.ts" />
+        <option value="$PROJECT_DIR$/../mindweb-request-classes/.gitignore" />
       </list>
     </option>
   </component>
@@ -284,7 +275,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1487408190538</updated>
-      <workItem from="1487408199752" duration="9311000" />
+      <workItem from="1487408199752" duration="9498000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1487410272621</created>
@@ -293,15 +284,22 @@
       <option name="project" value="LOCAL" />
       <updated>1487410272621</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixed exports">
+      <created>1487453663811</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1487453663811</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9311000" />
+    <option name="totallyTimeSpent" value="9498000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="24" width="1227" height="1000" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.50331676" order="-1" side_tool="true" content_ui="tabs" />
@@ -310,7 +308,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32929516" sideWeight="0.49668324" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2495854" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2495854" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -340,7 +338,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Fixed exports" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed exports" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -356,14 +355,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../mindweb-request-classes/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../mindweb-request-classes/src/service/MindwebService.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -596,8 +587,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../mindweb-request-classes/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="293">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mindweb-request-classes/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding />
         </state>
       </provider>
