@@ -1,0 +1,31 @@
+{
+  "name": "mindweb-request-classes",
+  "version": "0.0.2",
+  "typescript": {
+    "definition": "index.d.ts"
+  },
+  "scripts": {
+    "preinstall": "npm install autodts",
+    "postinstall": "autodts link",
+    "prepublish": "tsc && autodts generate",
+    "test": "node test/test.js"
+  },
+  "dependencies": {
+    "autodts": "~0.0.6",
+    "map-editor": "^1.0.0",
+    "@types/websocket": "0.0.32"
+  },
+  "devDependencies": {
+    "@lib/autodts-generator": "~0.0.1",
+    "typescript": "~2.1.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://dev.itworks.hu/MindWeb/mindweb-request-classes.git"
+  },
+  "author": "Gergely Papp <gergely.papp@it-works.hu> (http://itworks.hu/)",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://dev.itworks.hu/MindWeb/issues"
+  }
+}
