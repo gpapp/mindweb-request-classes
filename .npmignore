@@ -1,11 +1,9 @@
 .idea
 src/
 node_modules/
-typings/
-tsconfig,json
-*.d.ts
+tsconfig.json
 *.log
 *.tgz
-
-!src/index.d.ts
+.npmignore
+!index.d.ts
 

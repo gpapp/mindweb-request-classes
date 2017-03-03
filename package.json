@@ -1,21 +1,21 @@
 {
   "name": "mindweb-request-classes",
-  "version": "0.0.7",
-  "main": "index.d.ts",
+  "version": "0.0.10-beta9",
+  "main": "dist/index.d.ts",
   "typescript": {
-    "definition": "index.d.ts"
+    "definition": "dist/index.d.ts"
   },
   "scripts": {
-    "prepublish": "tsc;dts-generator --out index.d.ts --name mindweb-request-classes --project .",
+    "build": "tsc -p src/",
+    "prepublish": "tsc",
     "test": "node test/test.js"
   },
   "dependencies": {
-    "map-editor": "^1.0.0",
-    "@types/websocket": "0.0.32"
+    "@types/cassandra-driver": "^0.8.9",
+    "@types/websocket": "0.0.33"
   },
   "devDependencies": {
-    "dts-generator": "^2.1.0",
-    "typescript": "~2.1.6"
+    "typescript": "~2.2.1"
   },
   "repository": {
     "type": "git",
