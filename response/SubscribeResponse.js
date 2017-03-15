@@ -6,7 +6,8 @@ class SubscribeResponse extends AbstractResponse_1.AbstractResponse {
         super();
         this._mapContainer = _mapContainer;
     }
-    get mapContainter() {
+
+    get mapContainer() {
         return this._mapContainer;
     }
 }

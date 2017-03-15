@@ -5,11 +5,9 @@ class AbstractResponse extends AbstractMessage_1.AbstractMessage {
     get correlationId() {
         return this._correlationId;
     }
-
     set correlationId(value) {
         this._correlationId = value;
     }
-
     constructor() {
         super();
     }

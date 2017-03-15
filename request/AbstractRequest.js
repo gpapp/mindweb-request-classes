@@ -5,19 +5,15 @@ class AbstractRequest {
     get correlationId() {
         return this._correlationId;
     }
-
     set correlationId(value) {
         this._correlationId = value;
     }
-
     get sessionId() {
         return this._sessionId;
     }
-
     constructor() {
         this.name = this.constructor.name;
     }
-
     execute(sessionId, userId, service, callback) {
         this._sessionId = sessionId;
         try {

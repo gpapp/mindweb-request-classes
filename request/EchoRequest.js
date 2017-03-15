@@ -6,7 +6,6 @@ class EchoRequest extends AbstractRequest_1.AbstractRequest {
         super();
         this._content = _content;
     }
-
     get content() {
         return this._content;
     }

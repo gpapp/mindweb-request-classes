@@ -1,6 +1,6 @@
 import {AbstractResponse} from "./AbstractResponse";
 import MapContainer from "../classes/MapContainer";
-export default class SubscribeResponse extends AbstractResponse {
+export default class UnsubscribeResponse extends AbstractResponse {
     get mapContainer(): MapContainer {
         return this._mapContainer;
     }

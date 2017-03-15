@@ -16,11 +16,9 @@ class FileContent {
             this.rootNode = new MapNode_1.default(parsed.rootNode);
         }
     }
-
     recurseNodes(f) {
         return this.rootNode.recurseNodes(f);
     }
-
     findNodeById(id) {
         let retval = null;
         this.recurseNodes(function (node) {

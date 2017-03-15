@@ -5,11 +5,9 @@ class PublishedResponse {
         this._originSessionId = _originSessionId;
         this._message = _message;
     }
-
     get message() {
         return this._message;
     }
-
     get originSessionId() {
         return this._originSessionId;
     }

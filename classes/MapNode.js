@@ -44,7 +44,6 @@ class MapNode extends MapNodeCore_1.default {
             this.hook = toCopy.hook;
         }
     }
-
     hasIcon(name) {
         if (!this.icon) {
             return false;
@@ -57,7 +56,6 @@ class MapNode extends MapNodeCore_1.default {
         }
         return false;
     }
-
     addIcon(name) {
         const newIcon = new MapNodeCore_1.default({"BUILTIN": name});
         if (!this.icon) {
@@ -65,7 +63,6 @@ class MapNode extends MapNodeCore_1.default {
         }
         this.icon.push(newIcon);
     }
-
     addAttribute(name, value) {
         if (!this.attribute) {
             this.attribute = [];
@@ -86,7 +83,6 @@ class MapNode extends MapNodeCore_1.default {
             this.attribute.push(new MapNodeCore_1.default({"NAME": name, "VALUE": value}));
         }
     }
-
     removeAttribute(name) {
         if (!this.attribute) {
             return false;
@@ -99,7 +95,6 @@ class MapNode extends MapNodeCore_1.default {
         }
         return false;
     }
-
     getAttribute(name) {
         if (!this.attribute) {
             return null;
@@ -111,7 +106,6 @@ class MapNode extends MapNodeCore_1.default {
         }
         return null;
     }
-
     recurseNodes(f) {
         for (let i = 0; i < this.node.length; i++) {
             const curNode = this.node[i];

@@ -1,1 +1,10 @@
-{"version":3,"file":"SubscribeResponse.js","sourceRoot":"","sources":["SubscribeResponse.ts"],"names":[],"mappings":";;AAAA,yDAAoD;AAEpD,uBAAuC,SAAQ,mCAAgB;IAK3D,YAAoB,aAA2B;QAC3C,KAAK,EAAE,CAAC;QADQ,kBAAa,GAAb,aAAa,CAAc;IAE/C,CAAC;IAND,IAAI,aAAa;QACb,MAAM,CAAC,IAAI,CAAC,aAAa,CAAC;IAC9B,CAAC;CAKJ;AARD,oCAQC"}
+{
+  "version": 3,
+  "file": "SubscribeResponse.js",
+  "sourceRoot": "",
+  "sources": [
+    "SubscribeResponse.ts"
+  ],
+  "names": [],
+  "mappings": ";;AAAA,yDAAoD;AAEpD,uBAAuC,SAAQ,mCAAgB;IAK3D,YAAoB,aAA2B;QAC3C,KAAK,EAAE,CAAC;QADQ,kBAAa,GAAb,aAAa,CAAc;IAE/C,CAAC;IAND,IAAI,YAAY;QACZ,MAAM,CAAC,IAAI,CAAC,aAAa,CAAC;IAC9B,CAAC;CAKJ;AARD,oCAQC"
+}

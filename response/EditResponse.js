@@ -6,7 +6,6 @@ class EditResponse extends AbstractResponse_1.AbstractResponse {
         super();
         this._action = _action;
     }
-
     get action() {
         return this._action;
     }

@@ -6,7 +6,6 @@ class SubscribeRequest extends AbstractRequest_1.AbstractRequest {
         super();
         this._fileId = _fileId;
     }
-
     get fileId() {
         return this._fileId;
     }

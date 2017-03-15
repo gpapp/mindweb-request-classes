@@ -12,7 +12,6 @@ class File {
         this.versions = versions;
         this.tags = tags;
     }
-
     canView(userId) {
         if (this.isPublic)
             return true;
@@ -35,7 +34,6 @@ class File {
         }
         return false;
     }
-
     canEdit(userId) {
         if (!userId) {
             return false;
@@ -54,7 +52,6 @@ class File {
         }
         return false;
     }
-
     canRemove(userId) {
         if (!userId) {
             return false;
