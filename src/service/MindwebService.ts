@@ -1,3 +1,3 @@
-export abstract class MindwebService {
+export interface MindwebService {
 }
 export default MindwebService;
