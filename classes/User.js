@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", {value: true});
-class User {
-    constructor(id, persona, name, email, avatarUrl, created, modified) {
+var User = (function () {
+    function User(id, persona, name, email, avatarUrl, created, modified) {
         this.id = id;
         this.persona = persona;
         this.name = name;
@@ -10,6 +10,8 @@ class User {
         this.created = created;
         this.modified = modified;
     }
-}
+
+    return User;
+}());
 exports.default = User;
 //# sourceMappingURL=User.js.map

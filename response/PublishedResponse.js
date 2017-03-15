@@ -1,16 +1,26 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", {value: true});
-class PublishedResponse {
-    constructor(_originSessionId, _message) {
+var PublishedResponse = (function () {
+    function PublishedResponse(_originSessionId, _message) {
         this._originSessionId = _originSessionId;
         this._message = _message;
     }
-    get message() {
-        return this._message;
-    }
-    get originSessionId() {
-        return this._originSessionId;
-    }
-}
+
+    Object.defineProperty(PublishedResponse.prototype, "message", {
+        get: function () {
+            return this._message;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(PublishedResponse.prototype, "originSessionId", {
+        get: function () {
+            return this._originSessionId;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return PublishedResponse;
+}());
 exports.default = PublishedResponse;
 //# sourceMappingURL=PublishedResponse.js.map

@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", {value: true});
-class File {
-    constructor(id, name, owner, viewers, editors, isShareable, isPublic, versions, tags) {
+var File = (function () {
+    function File(id, name, owner, viewers, editors, isShareable, isPublic, versions, tags) {
         this.id = id;
         this.name = name;
         this.owner = owner;
@@ -12,7 +12,8 @@ class File {
         this.versions = versions;
         this.tags = tags;
     }
-    canView(userId) {
+
+    File.prototype.canView = function (userId) {
         if (this.isPublic)
             return true;
         if (this.isShareable)
@@ -20,44 +21,45 @@ class File {
         if (!userId) {
             return false;
         }
-        const strUserId = userId.toString();
+        var strUserId = userId.toString();
         if (this.canEdit(userId)) {
             return true;
         }
         if (this.viewers != null) {
-            for (let i in this.viewers) {
-                const strViewer = this.viewers[i].toString();
+            for (var i in this.viewers) {
+                var strViewer = this.viewers[i].toString();
                 if (strUserId === strViewer) {
                     return true;
                 }
             }
         }
         return false;
-    }
-    canEdit(userId) {
+    };
+    File.prototype.canEdit = function (userId) {
         if (!userId) {
             return false;
         }
-        const strUserId = userId.toString();
+        var strUserId = userId.toString();
         if (this.canRemove(userId)) {
             return true;
         }
         if (this.editors != null) {
-            for (let i in this.editors) {
-                const strEditor = this.editors[i].toString();
+            for (var i in this.editors) {
+                var strEditor = this.editors[i].toString();
                 if (strUserId === strEditor) {
                     return true;
                 }
             }
         }
         return false;
-    }
-    canRemove(userId) {
+    };
+    File.prototype.canRemove = function (userId) {
         if (!userId) {
             return false;
         }
         return this.owner.toString() === userId.toString();
-    }
-}
+    };
+    return File;
+}());
 exports.default = File;
 //# sourceMappingURL=MapContainer.js.map

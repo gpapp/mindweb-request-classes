@@ -26,6 +26,7 @@ import JoinResponse from "./response/JoinResponse";
 import PublishedResponse from "./response/PublishedResponse";
 import TextResponse from "./response/TextResponse";
 import SubscribeResponse from "./response/SubscribeResponse";
+import UnsubscribeResponse from "./response/UnsubscribeResponse";
 import MapService from "./service/MapService";
 import ResponseFactory from "./service/ResponseFactory";
 
@@ -56,6 +57,7 @@ export {
     JoinResponse,
     PublishedResponse,
     SubscribeResponse,
+    UnsubscribeResponse,
     TextResponse,
 
     MapService,

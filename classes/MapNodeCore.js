@@ -1,9 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", {value: true});
-class MapNodeCore {
-    constructor($) {
+var MapNodeCore = (function () {
+    function MapNodeCore($) {
         this.$ = $;
     }
-}
+
+    return MapNodeCore;
+}());
 exports.default = MapNodeCore;
 //# sourceMappingURL=MapNodeCore.js.map

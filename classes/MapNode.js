@@ -1,74 +1,94 @@
 "use strict";
+var __extends = (this && this.__extends) || (function () {
+        var extendStatics = Object.setPrototypeOf ||
+            ({__proto__: []} instanceof Array && function (d, b) {
+                d.__proto__ = b;
+            }) ||
+            function (d, b) {
+                for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+            };
+        return function (d, b) {
+            extendStatics(d, b);
+            function __() {
+                this.constructor = d;
+            }
+
+            d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+        };
+    })();
 Object.defineProperty(exports, "__esModule", {value: true});
-const MapNodeCore_1 = require("./MapNodeCore");
-class MapNode extends MapNodeCore_1.default {
-    constructor(toCopy) {
-        super(toCopy.$);
+var MapNodeCore_1 = require("./MapNodeCore");
+var MapNode = (function (_super) {
+    __extends(MapNode, _super);
+    function MapNode(toCopy) {
+        var _this = _super.call(this, toCopy.$) || this;
         if (toCopy.open) {
-            this.open = toCopy.open;
+            _this.open = toCopy.open;
         }
         if (toCopy.nodeMarkdown) {
-            this.nodeMarkdown = toCopy.nodeMarkdown;
+            _this.nodeMarkdown = toCopy.nodeMarkdown;
         }
         if (toCopy.detailMarkdown) {
-            this.detailMarkdown = toCopy.detailMarkdown;
+            _this.detailMarkdown = toCopy.detailMarkdown;
         }
         if (toCopy.detailOpen) {
-            this.detailOpen = toCopy.detailOpen;
+            _this.detailOpen = toCopy.detailOpen;
         }
         if (toCopy.noteMarkdown) {
-            this.noteMarkdown = toCopy.noteMarkdown;
+            _this.noteMarkdown = toCopy.noteMarkdown;
         }
         if (toCopy.richcontent) {
-            this.richcontent = toCopy.richcontent;
+            _this.richcontent = toCopy.richcontent;
         }
         if (toCopy.node) {
-            this.node = [];
-            for (let i = 0; i < toCopy.node.length; i++) {
-                this.node.push(new MapNode(toCopy.node[i]));
+            _this.node = [];
+            for (var i = 0; i < toCopy.node.length; i++) {
+                _this.node.push(new MapNode(toCopy.node[i]));
             }
         }
         if (toCopy.icon) {
-            this.icon = [];
-            for (let i = 0; i < toCopy.icon.length; i++) {
-                this.icon.push(new MapNodeCore_1.default(toCopy.icon[i].$));
+            _this.icon = [];
+            for (var i = 0; i < toCopy.icon.length; i++) {
+                _this.icon.push(new MapNodeCore_1.default(toCopy.icon[i].$));
             }
         }
         if (toCopy.attribute) {
-            this.attribute = [];
-            for (let i = 0; i < toCopy.attribute.length; i++) {
-                this.attribute.push(new MapNodeCore_1.default(toCopy.attribute[i].$));
+            _this.attribute = [];
+            for (var i = 0; i < toCopy.attribute.length; i++) {
+                _this.attribute.push(new MapNodeCore_1.default(toCopy.attribute[i].$));
             }
         }
         if (toCopy.hook) {
-            this.hook = toCopy.hook;
+            _this.hook = toCopy.hook;
         }
+        return _this;
     }
-    hasIcon(name) {
+
+    MapNode.prototype.hasIcon = function (name) {
         if (!this.icon) {
             return false;
         }
-        for (let i = 0; i < this.icon.length; i++) {
-            const curItem = this.icon[i];
+        for (var i = 0; i < this.icon.length; i++) {
+            var curItem = this.icon[i];
             if (curItem.$['BUILTIN'] === name) {
                 return true;
             }
         }
         return false;
-    }
-    addIcon(name) {
-        const newIcon = new MapNodeCore_1.default({"BUILTIN": name});
+    };
+    MapNode.prototype.addIcon = function (name) {
+        var newIcon = new MapNodeCore_1.default({"BUILTIN": name});
         if (!this.icon) {
             this.icon = [];
         }
         this.icon.push(newIcon);
-    }
-    addAttribute(name, value) {
+    };
+    MapNode.prototype.addAttribute = function (name, value) {
         if (!this.attribute) {
             this.attribute = [];
         }
-        let done = false;
-        for (let i = 0; i < this.attribute.length; i++) {
+        var done = false;
+        for (var i = 0; i < this.attribute.length; i++) {
             if (this.attribute[i].$['NAME'] === name) {
                 if (!done) {
                     this.attribute[i].$['VALUE'] = value;
@@ -82,43 +102,44 @@ class MapNode extends MapNodeCore_1.default {
         if (!done) {
             this.attribute.push(new MapNodeCore_1.default({"NAME": name, "VALUE": value}));
         }
-    }
-    removeAttribute(name) {
+    };
+    MapNode.prototype.removeAttribute = function (name) {
         if (!this.attribute) {
             return false;
         }
-        for (let i = 0; i < this.attribute.length; i++) {
+        for (var i = 0; i < this.attribute.length; i++) {
             if (this.attribute[i].$['NAME'] === name) {
                 this.attribute.splice(i, 1);
                 return true;
             }
         }
         return false;
-    }
-    getAttribute(name) {
+    };
+    MapNode.prototype.getAttribute = function (name) {
         if (!this.attribute) {
             return null;
         }
-        for (let i = 0; i < this.attribute.length; i++) {
+        for (var i = 0; i < this.attribute.length; i++) {
             if (this.attribute[i].$['NAME'] === name) {
                 return this.attribute[i].$['VALUE'];
             }
         }
         return null;
-    }
-    recurseNodes(f) {
-        for (let i = 0; i < this.node.length; i++) {
-            const curNode = this.node[i];
-            const stop = f(curNode);
-            if (!stop && curNode.node) {
+    };
+    MapNode.prototype.recurseNodes = function (f) {
+        for (var i = 0; i < this.node.length; i++) {
+            var curNode = this.node[i];
+            var stop_1 = f(curNode);
+            if (!stop_1 && curNode.node) {
                 curNode.recurseNodes(f);
             }
-            if (stop) {
+            if (stop_1) {
                 return true;
             }
         }
         return false;
-    }
-}
+    };
+    return MapNode;
+}(MapNodeCore_1.default));
 exports.default = MapNode;
 //# sourceMappingURL=MapNode.js.map

@@ -1,27 +1,30 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const ServiceError_1 = require("../classes/ServiceError");
-class MapService {
-    static findNodeById(node, nodeId) {
+var ServiceError_1 = require("../classes/ServiceError");
+var MapService = (function () {
+    function MapService() {
+    }
+
+    MapService.findNodeById = function (node, nodeId) {
         if (node.$['ID'] === nodeId) {
             return node;
         }
         if (!node.node) {
             return null;
         }
-        for (let index in node.node) {
+        for (var index in node.node) {
             if (!node.node.hasOwnProperty(index)) {
                 continue;
             }
-            const found = MapService.findNodeById(node.node[index], nodeId);
+            var found = MapService.findNodeById(node.node[index], nodeId);
             if (found) {
                 return found;
             }
         }
         return null;
-    }
-    static applyAction(file, action, callback) {
-        const eventNode = MapService.findNodeById(file.rootNode, action.parent);
+    };
+    MapService.applyAction = function (file, action, callback) {
+        var eventNode = MapService.findNodeById(file.rootNode, action.parent);
         if (!eventNode) {
             callback(new ServiceError_1.default(403, 'Cannot find root node with id:' + action.parent, 'applyAction'));
             return;
@@ -60,7 +63,7 @@ class MapService {
                 break;
             case 'deleteNode':
                 //TODO delete eventNode;
-                for (let i = 0; i < eventNode.node.length; i++) {
+                for (var i = 0; i < eventNode.node.length; i++) {
                     if (eventNode.node[i].$['ID'] === action.payload) {
                         eventNode.node.splice(i, 1);
                         break;
@@ -72,15 +75,15 @@ class MapService {
                 }
                 break;
             case 'nodeMove':
-                const elementId = action.payload['elementId'];
-                const fromIndex = action.payload['fromIndex'];
-                const toParentId = action.payload['toParentId'];
-                const toIndex = action.payload['toIndex'];
-                const element = MapService.findNodeById(eventNode, elementId);
+                var elementId = action.payload['elementId'];
+                var fromIndex = action.payload['fromIndex'];
+                var toParentId = action.payload['toParentId'];
+                var toIndex = action.payload['toIndex'];
+                var element = MapService.findNodeById(eventNode, elementId);
                 if (!element) {
                     return callback(new ServiceError_1.default(403, 'Cannot find element to move: ' + elementId, 'applyAction'));
                 }
-                const toParent = MapService.findNodeById(file.rootNode, toParentId);
+                var toParent = MapService.findNodeById(file.rootNode, toParentId);
                 if (!toParent) {
                     return callback(new ServiceError_1.default(403, 'Cannot find element to move to: ' + toParentId, 'applyAction'));
                 }
@@ -95,7 +98,8 @@ class MapService {
                 return callback(new ServiceError_1.default(403, 'Unimplemented event: ' + action.event, 'applyAction'));
         }
         callback();
-    }
-}
+    };
+    return MapService;
+}());
 exports.default = MapService;
 //# sourceMappingURL=MapService.js.map
