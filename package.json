@@ -1,13 +1,13 @@
 {
   "name": "mindweb-request-classes",
-  "version": "0.0.10-beta13",
+  "version": "0.0.10-beta16",
   "main": "dist/index.d.ts",
   "typescript": {
     "definition": "dist/index.d.ts"
   },
   "scripts": {
     "build": "tsc -p src/",
-    "prepublish": "tsc",
+    "prepublish": "rm dist -r;tsc",
     "test": "node test/test.js"
   },
   "dependencies": {

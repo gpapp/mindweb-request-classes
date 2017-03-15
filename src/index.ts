@@ -2,9 +2,9 @@
  * Created by gpapp on 2017.03.02..
  */
 import EditAction from "./classes/EditAction";
-import File from "./classes/MapContainer";
-import FileContent from "./classes/FileContent";
-import FileVersion from "./classes/FileVersion";
+import MapContainer from "./classes/MapContainer";
+import MapContent from "./classes/MapContent";
+import MapVersion from "./classes/MapVersion";
 import Friend from "./classes/Friend";
 import MapNode from "./classes/MapNode";
 import MapNodeCore from "./classes/MapNodeCore";
@@ -17,21 +17,24 @@ import EchoRequest from "./request/EchoRequest";
 import EditRequest from "./request/EditRequest";
 import SubscribeRequest from "./request/SubscribeRequest";
 import UnsubscribeRequest from "./request/UnsubscribeRequest";
+import AbstractMessage from "./response/AbstractMessage";
+import AbstractBroadcast from "./response/AbstractBroadcast";
 import AbstractResponse from "./response/AbstractResponse";
 import EditResponse from "./response/EditResponse";
 import ErrorResponse from "./response/ErrorResponse";
 import JoinResponse from "./response/JoinResponse";
 import PublishedResponse from "./response/PublishedResponse";
 import TextResponse from "./response/TextResponse";
+import SubscribeResponse from "./response/SubscribeResponse";
 import MapService from "./service/MapService";
 import MindwebService from "./service/MindwebService";
 import ResponseFactory from "./service/ResponseFactory";
 
 export {
     EditAction,
-    File,
-    FileContent,
-    FileVersion,
+    MapContainer,
+    MapContent,
+    MapVersion,
     Friend,
     MapNode,
     MapNodeCore,
@@ -46,11 +49,14 @@ export {
     SubscribeRequest,
     UnsubscribeRequest,
 
+    AbstractMessage,
+    AbstractBroadcast,
     AbstractResponse,
     EditResponse,
     ErrorResponse,
     JoinResponse,
     PublishedResponse,
+    SubscribeResponse,
     TextResponse,
 
     MapService,

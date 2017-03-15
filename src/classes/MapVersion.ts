@@ -1,5 +1,5 @@
 import File from "./MapContainer";
-import FileContent from "./FileContent";
+import FileContent from "./MapContent";
 export default class FileVersion {
     version: number;
     content: FileContent;

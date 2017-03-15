@@ -1,5 +1,5 @@
 import MapNode from "../classes/MapNode";
-import FileContent from "../classes/FileContent";
+import FileContent from "../classes/MapContent";
 import EditAction from "../classes/EditAction";
 import ServiceError from "../classes/ServiceError";
 export default class MapService {
