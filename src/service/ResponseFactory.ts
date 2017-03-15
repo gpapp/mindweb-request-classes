@@ -1,9 +1,10 @@
 import {IMessage} from "websocket";
 import {AbstractResponse} from "../response/AbstractResponse";
+import {AbstractMessage} from "../response/AbstractMessage";
 
 export default class ResponseFactory {
 
-    static create(message: IMessage): AbstractResponse {
+    static create(message: IMessage): AbstractMessage {
         const payload = JSON.parse(message.utf8Data);
 
         if (!payload.name || !/^[$_a-z][$_a-z0-9.]*$/i.test(payload.name)) {

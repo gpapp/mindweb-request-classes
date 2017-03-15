@@ -2,9 +2,18 @@ import {MindwebService} from "../service/MindwebService";
 import {AbstractResponse} from "../response/AbstractResponse";
 import ErrorResponse from "../response/ErrorResponse";
 export abstract class AbstractRequest {
+    get correlationId(): string {
+        return this._correlationId;
+    }
+
+    set correlationId(value: string) {
+        this._correlationId = value;
+    }
     get sessionId(): string {
         return this._sessionId;
     }
+
+    private _correlationId: string;
     private _sessionId: string;
     private name: string;
 
