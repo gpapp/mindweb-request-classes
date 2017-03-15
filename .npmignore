@@ -1,4 +1,4 @@
-.idea
+.idea/
 src/
 node_modules/
 tsconfig.json
@@ -6,4 +6,5 @@ tsconfig.json
 *.tgz
 .npmignore
 !index.d.ts
+
 

@@ -1,10 +1,19 @@
-export abstract class AbstractResponse {
-    fileId: string;
+import {AbstractMessage} from "./AbstractMessage";
+export abstract class AbstractResponse extends AbstractMessage {
+    get correlationId(): string {
+        return this._correlationId;
+    }
+
+    set correlationId(value: string) {
+        this._correlationId = value;
+    }
+
     result: string;
-    name: string;
+
+    private _correlationId: string;
 
     constructor() {
-        this.name = this.constructor.name;
+        super();
     }
 }
 export default AbstractResponse;
