@@ -1,17 +1,16 @@
-import * as cassandra from "@types/cassandra-driver";
 export default class Friend {
-    public id: string|cassandra.types.Uuid;
-    public owner: string|cassandra.types.Uuid;
+    public id: string;
+    public owner: string;
     public alias: string;
-    public linkedUser: string|cassandra.types.Uuid;
+    public linkedUser: string;
     public tags: string[];
     public created: string;
     public modified: string;
 
-    constructor(id: string|cassandra.types.Uuid,
-                owner: string|cassandra.types.Uuid,
+    constructor(id: string,
+                owner: string,
                 alias: string,
-                linkedUser: string|cassandra.types.Uuid,
+                linkedUser: string,
                 tags: string[],
                 created: string,
                 modified: string) {

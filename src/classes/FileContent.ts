@@ -21,7 +21,7 @@ export default class FileContent {
         return this.rootNode.recurseNodes(f);
     }
 
-    public findNodeById(id: String): MapNode {
+    public findNodeById(id: string): MapNode {
         let retval = null;
         this.recurseNodes(function (node: MapNode): boolean {
             if (node.$['ID'] === id) {

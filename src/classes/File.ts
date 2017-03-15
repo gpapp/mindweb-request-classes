@@ -1,22 +1,21 @@
-import * as cassandra from '@types/cassandra-driver';
 export default class File {
-    id: string|cassandra.types.Uuid;
+    id: string;
     name: string;
-    owner: string|cassandra.types.Uuid;
+    owner: string;
     isShareable: boolean;
     isPublic: boolean;
-    viewers: (string|cassandra.types.Uuid)[];
-    editors: (string|cassandra.types.Uuid)[];
-    versions: (string|cassandra.types.Uuid)[];
+    viewers: (string)[];
+    editors: (string)[];
+    versions: (string)[];
     tags: string[];
 
-    public constructor(id: string|cassandra.types.Uuid,
-                       name: string, owner: string|cassandra.types.Uuid,
-                       viewers: (string|cassandra.types.Uuid)[],
-                       editors: (string|cassandra.types.Uuid)[],
+    public constructor(id: string,
+                       name: string, owner: string,
+                       viewers: (string)[],
+                       editors: (string)[],
                        isShareable: boolean,
                        isPublic: boolean,
-                       versions: (string|cassandra.types.Uuid)[],
+                       versions: (string)[],
                        tags: string[]) {
         this.id = id;
         this.name = name;
@@ -29,7 +28,7 @@ export default class File {
         this.tags = tags;
     }
 
-    public canView(userId: string|cassandra.types.Uuid): boolean {
+    public canView(userId: string): boolean {
         if (this.isPublic) return true;
         if (this.isShareable) return true;
         if (!userId) {
@@ -51,7 +50,7 @@ export default class File {
         return false;
     }
 
-    public canEdit(userId: string|cassandra.types.Uuid): boolean {
+    public canEdit(userId: string): boolean {
         if (!userId) {
             return false;
         }
@@ -70,7 +69,7 @@ export default class File {
         return false;
     }
 
-    public canRemove(userId: string|cassandra.types.Uuid): boolean {
+    public canRemove(userId: string): boolean {
         if (!userId) {
             return false;
         }

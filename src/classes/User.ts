@@ -1,6 +1,5 @@
-import * as cassandra from "@types/cassandra-driver";
 export default class User {
-    public id: string|cassandra.types.Uuid;
+    public id: string;
     public persona: string[];
     public name: string;
     public email: string;
@@ -8,7 +7,7 @@ export default class User {
     public created: string;
     public modified: string;
 
-    constructor(id: string|cassandra.types.Uuid,
+    constructor(id: string,
                 persona: string[],
                 name: string,
                 email: string,

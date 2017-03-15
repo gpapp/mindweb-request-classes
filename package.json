@@ -1,6 +1,6 @@
 {
   "name": "mindweb-request-classes",
-  "version": "0.0.10-beta10",
+  "version": "0.0.10-beta11",
   "main": "dist/index.d.ts",
   "typescript": {
     "definition": "dist/index.d.ts"
@@ -11,7 +11,6 @@
     "test": "node test/test.js"
   },
   "dependencies": {
-    "@types/cassandra-driver": "^0.8.9",
     "@types/websocket": "0.0.33"
   },
   "devDependencies": {
