@@ -5,6 +5,8 @@ tsconfig.json
 *.log
 *.tgz
 .npmignore
+*.ts
+!*.d.ts
 !index.d.ts
 
 

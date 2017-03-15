@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "SubscribeRequest.js",
+  "sourceRoot": "",
+  "sources": [
+    "SubscribeRequest.ts"
+  ],
+  "names": [],
+  "mappings": ";;AAAA,uDAAkD;AAClD,sBAAuC,SAAQ,iCAAe;IAK1D,YAAoB,OAAe;QAC/B,KAAK,EAAE,CAAC;QADQ,YAAO,GAAP,OAAO,CAAQ;IAEnC,CAAC;IAND,IAAI,MAAM;QACN,MAAM,CAAC,IAAI,CAAC,OAAO,CAAC;IACxB,CAAC;CAKJ;AARD,4CAQC;AACD,kBAAe,gBAAgB,CAAC"
+}

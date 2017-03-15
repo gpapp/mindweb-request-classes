@@ -27,7 +27,6 @@ import PublishedResponse from "./response/PublishedResponse";
 import TextResponse from "./response/TextResponse";
 import SubscribeResponse from "./response/SubscribeResponse";
 import MapService from "./service/MapService";
-import MindwebService from "./service/MindwebService";
 import ResponseFactory from "./service/ResponseFactory";
 
 export {
@@ -60,6 +59,5 @@ export {
     TextResponse,
 
     MapService,
-    MindwebService,
     ResponseFactory,
 };

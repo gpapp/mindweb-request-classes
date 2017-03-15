@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "MapNodeCore.js",
+  "sourceRoot": "",
+  "sources": [
+    "MapNodeCore.ts"
+  ],
+  "names": [],
+  "mappings": ";;AAAA;IAGI,YAAY,CAAC;QACT,IAAI,CAAC,CAAC,GAAG,CAAC,CAAC;IACf,CAAC;CACJ;AAND,8BAMC"
+}
