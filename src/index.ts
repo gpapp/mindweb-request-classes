@@ -2,7 +2,7 @@
  * Created by gpapp on 2017.03.02..
  */
 import EditAction from "./classes/EditAction";
-import File from "./classes/File";
+import File from "./classes/MapContainer";
 import FileContent from "./classes/FileContent";
 import FileVersion from "./classes/FileVersion";
 import Friend from "./classes/Friend";

@@ -1,10 +1,11 @@
 import {AbstractRequest} from "./AbstractRequest";
 export abstract class EchoRequest extends AbstractRequest {
-    content: string;
+    get content(): string {
+        return this._content;
+    }
 
-    constructor(content?: string) {
+    constructor(private _content?: string) {
         super();
-        this.content = content;
     }
 }
 export default EchoRequest;

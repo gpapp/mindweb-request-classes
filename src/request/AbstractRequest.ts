@@ -9,6 +9,7 @@ export abstract class AbstractRequest {
     set correlationId(value: string) {
         this._correlationId = value;
     }
+
     get sessionId(): string {
         return this._sessionId;
     }
@@ -23,14 +24,14 @@ export abstract class AbstractRequest {
         this.name = this.constructor.name;
     }
 
-    public execute(sessionId: string, userId: string, service: MindwebService, callback: (response) => void): void {
+    public execute(sessionId: string, userId: string, service: MindwebService, callback: (response: AbstractResponse) => void): void {
         this._sessionId = sessionId;
         try {
             this.internalExecute(userId, service, function (response: AbstractResponse) {
-                callback(JSON.stringify(response));
+                callback(response);
             });
         } catch (e) {
-            callback(JSON.stringify(new ErrorResponse(e)));
+            callback(new ErrorResponse(e));
         }
     }
 }

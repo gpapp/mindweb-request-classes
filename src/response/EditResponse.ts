@@ -1,11 +1,12 @@
 import {AbstractResponse} from "./AbstractResponse";
 import EditAction from "../classes/EditAction";
 export class EditResponse extends AbstractResponse {
-    action: EditAction;
+    get action(): EditAction {
+        return this._action;
+    }
 
-    constructor(action: EditAction) {
+    constructor(private _action: EditAction) {
         super();
-        this.action = action;
     }
 }
 export default EditResponse;

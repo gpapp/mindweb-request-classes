@@ -1,9 +1,10 @@
 import {AbstractResponse} from "./AbstractResponse";
 export default class JoinResponse extends AbstractResponse {
-    userId: string;
+    get userId() {
+        return this._userId;
+    }
 
-    constructor(userId: string) {
+    constructor(private _userId: string) {
         super();
-        this.userId = userId;
     }
 }

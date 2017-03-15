@@ -1,10 +1,14 @@
 import {AbstractResponse} from "./AbstractResponse";
 export default class PublishedResponse {
-    originSessionId: string;
-    response: AbstractResponse;
+    get response(): AbstractResponse {
+        return this._response;
+    }
 
-    constructor(originSessionId: string, payload: AbstractResponse) {
-        this.originSessionId = originSessionId;
-        this.response = payload;
+    get originSessionId(): string {
+        return this._originSessionId;
+    }
+
+
+    constructor(private _originSessionId: string, private _response: AbstractResponse) {
     }
 }

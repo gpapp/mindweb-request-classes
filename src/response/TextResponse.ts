@@ -1,9 +1,10 @@
 import {AbstractResponse} from "./AbstractResponse";
 export default class TextResponse extends AbstractResponse {
-    message: string;
+    get message(): string {
+        return this._message;
+    }
 
-    constructor(msg?: string) {
+    constructor(private  _message: string) {
         super();
-        this.message = msg;
     }
 }

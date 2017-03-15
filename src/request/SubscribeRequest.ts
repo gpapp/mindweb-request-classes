@@ -1,10 +1,11 @@
 import {AbstractRequest} from "./AbstractRequest";
 export abstract class SubscribeRequest extends AbstractRequest {
-    fileId: string;
+    get fileId(): string {
+        return this._fileId;
+    }
 
-    constructor(fileId: string) {
+    constructor(private _fileId: string) {
         super();
-        this.fileId = fileId;
     }
 }
 export default SubscribeRequest;
