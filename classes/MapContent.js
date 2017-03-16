@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", {value: true});
+Object.defineProperty(exports, "__esModule", { value: true });
 const MapNode_1 = require("./MapNode");
 class FileContent {
     constructor(data) {
@@ -16,11 +16,9 @@ class FileContent {
             this.rootNode = new MapNode_1.default(parsed.rootNode);
         }
     }
-
     recurseNodes(f) {
         return this.rootNode.recurseNodes(f);
     }
-
     findNodeById(id) {
         let retval = null;
         this.recurseNodes(function (node) {

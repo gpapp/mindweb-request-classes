@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", {value: true});
+Object.defineProperty(exports, "__esModule", { value: true });
 const MapNodeCore_1 = require("./MapNodeCore");
 class MapNode extends MapNodeCore_1.default {
     constructor(toCopy) {
@@ -44,7 +44,6 @@ class MapNode extends MapNodeCore_1.default {
             this.hook = toCopy.hook;
         }
     }
-
     hasIcon(name) {
         if (!this.icon) {
             return false;
@@ -57,15 +56,13 @@ class MapNode extends MapNodeCore_1.default {
         }
         return false;
     }
-
     addIcon(name) {
-        const newIcon = new MapNodeCore_1.default({"BUILTIN": name});
+        const newIcon = new MapNodeCore_1.default({ "BUILTIN": name });
         if (!this.icon) {
             this.icon = [];
         }
         this.icon.push(newIcon);
     }
-
     addAttribute(name, value) {
         if (!this.attribute) {
             this.attribute = [];
@@ -83,10 +80,9 @@ class MapNode extends MapNodeCore_1.default {
             }
         }
         if (!done) {
-            this.attribute.push(new MapNodeCore_1.default({"NAME": name, "VALUE": value}));
+            this.attribute.push(new MapNodeCore_1.default({ "NAME": name, "VALUE": value }));
         }
     }
-
     removeAttribute(name) {
         if (!this.attribute) {
             return false;
@@ -99,7 +95,6 @@ class MapNode extends MapNodeCore_1.default {
         }
         return false;
     }
-
     getAttribute(name) {
         if (!this.attribute) {
             return null;
@@ -111,7 +106,6 @@ class MapNode extends MapNodeCore_1.default {
         }
         return null;
     }
-
     recurseNodes(f) {
         for (let i = 0; i < this.node.length; i++) {
             const curNode = this.node[i];

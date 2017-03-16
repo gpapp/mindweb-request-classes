@@ -1,23 +1,19 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", {value: true});
+Object.defineProperty(exports, "__esModule", { value: true });
 const ErrorResponse_1 = require("../response/ErrorResponse");
 class AbstractRequest {
     get correlationId() {
         return this._correlationId;
     }
-
     set correlationId(value) {
         this._correlationId = value;
     }
-
     get sessionId() {
         return this._sessionId;
     }
-
     constructor() {
         this.name = this.constructor.name;
     }
-
     execute(sessionId, userId, service, callback) {
         const parent = this;
         this._sessionId = sessionId;

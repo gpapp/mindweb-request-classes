@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", {value: true});
+Object.defineProperty(exports, "__esModule", { value: true });
 const AbstractResponse_1 = require("./AbstractResponse");
 class ErrorResponse extends AbstractResponse_1.AbstractResponse {
     constructor(e) {

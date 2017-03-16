@@ -1,10 +1,1 @@
-{
-  "version": 3,
-  "file": "MindwebService.js",
-  "sourceRoot": "",
-  "sources": [
-    "MindwebService.ts"
-  ],
-  "names": [],
-  "mappings": ""
-}
+{"version":3,"file":"MindwebService.js","sourceRoot":"","sources":["MindwebService.ts"],"names":[],"mappings":""}

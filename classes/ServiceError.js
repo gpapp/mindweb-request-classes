@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", {value: true});
+Object.defineProperty(exports, "__esModule", { value: true });
 class ServiceError extends Error {
     constructor(statusCode, message, name) {
         super();

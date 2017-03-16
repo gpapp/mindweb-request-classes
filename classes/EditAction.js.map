@@ -1,10 +1,1 @@
-{
-  "version": 3,
-  "file": "EditAction.js",
-  "sourceRoot": "",
-  "sources": [
-    "EditAction.ts"
-  ],
-  "names": [],
-  "mappings": ";;AAAA;CAIC;AAJD,6BAIC"
-}
+{"version":3,"file":"EditAction.js","sourceRoot":"","sources":["EditAction.ts"],"names":[],"mappings":";;AAAA;CAIC;AAJD,6BAIC"}

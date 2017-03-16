@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const AbstractResponse_1 = require("../response/AbstractResponse");
 class ResponseFactory {
     static create(message) {
-        const payload = JSON.parse(message.utf8Data);
+        const payload = JSON.parse(message);
         if (!payload.name || !/^[$_a-z][$_a-z0-9.]*$/i.test(payload.name)) {
             throw new Error("Invalid payload class");
         }

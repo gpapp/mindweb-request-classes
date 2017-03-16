@@ -1,10 +1,1 @@
-{
-  "version": 3,
-  "file": "UnsubscribeRequest.js",
-  "sourceRoot": "",
-  "sources": [
-    "UnsubscribeRequest.ts"
-  ],
-  "names": [],
-  "mappings": ";;AAAA,uDAAkD;AAClD,wBAAyC,SAAQ,iCAAe;IAK5D,YAAoB,OAAe;QAC/B,KAAK,EAAE,CAAC;QADQ,YAAO,GAAP,OAAO,CAAQ;IAEnC,CAAC;IAND,IAAI,MAAM;QACN,MAAM,CAAC,IAAI,CAAC,OAAO,CAAC;IACxB,CAAC;CAKJ;AARD,gDAQC;AACD,kBAAe,kBAAkB,CAAC"
-}
+{"version":3,"file":"UnsubscribeRequest.js","sourceRoot":"","sources":["UnsubscribeRequest.ts"],"names":[],"mappings":";;AAAA,uDAAkD;AAClD,wBAAyC,SAAQ,iCAAe;IAK5D,YAAoB,OAAe;QAC/B,KAAK,EAAE,CAAC;QADQ,YAAO,GAAP,OAAO,CAAQ;IAEnC,CAAC;IAND,IAAI,MAAM;QACN,MAAM,CAAC,IAAI,CAAC,OAAO,CAAC;IACxB,CAAC;CAKJ;AARD,gDAQC;AACD,kBAAe,kBAAkB,CAAC"}

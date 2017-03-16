@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", {value: true});
+Object.defineProperty(exports, "__esModule", { value: true });
 class Friend {
     constructor(id, owner, alias, linkedUser, tags, created, modified) {
         this.id = id;

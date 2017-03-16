@@ -7,11 +7,9 @@ class JoinResponse extends AbstractResponse_1.AbstractResponse {
         this._userId = _userId;
         this._fileId = _fileId;
     }
-
     get fileId() {
         return this._fileId;
     }
-
     get userId() {
         return this._userId;
     }

@@ -1,6 +1,6 @@
 {
   "name": "mindweb-request-classes",
-  "version": "0.0.11-beta0016",
+  "version": "0.0.11-beta0017",
   "main": "index.js",
   "typescript": {
     "definition": "index.d.ts"
@@ -11,7 +11,7 @@
     "test": "node test/test.js"
   },
   "dependencies": {
-    "@types/websocket": "0.0.33"
+    "@types/node": "7.0.8"
   },
   "devDependencies": {
     "typescript": "~2.2.1"

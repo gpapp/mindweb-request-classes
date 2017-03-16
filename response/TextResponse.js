@@ -6,7 +6,6 @@ class TextResponse extends AbstractResponse_1.AbstractResponse {
         super();
         this._message = _message;
     }
-
     get message() {
         return this._message;
     }

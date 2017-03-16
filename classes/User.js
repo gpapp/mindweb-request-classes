@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", {value: true});
+Object.defineProperty(exports, "__esModule", { value: true });
 class User {
     constructor(id, persona, name, email, avatarUrl, created, modified) {
         this.id = id;

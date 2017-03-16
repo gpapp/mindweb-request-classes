@@ -20,7 +20,6 @@ class MapService {
         }
         return null;
     }
-
     static applyAction(file, action, callback) {
         const eventNode = MapService.findNodeById(file.rootNode, action.parent);
         if (!eventNode) {
