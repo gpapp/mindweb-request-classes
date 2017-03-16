@@ -25,13 +25,17 @@ export abstract class AbstractRequest {
     }
 
     public execute(sessionId: string, userId: string, service: MindwebService, callback: (response: AbstractResponse) => void): void {
+        const parent: AbstractRequest = this;
         this._sessionId = sessionId;
         try {
             this.internalExecute(userId, service, function (response: AbstractResponse) {
+                response.correlationId = parent.correlationId;
                 callback(response);
             });
         } catch (e) {
-            callback(new ErrorResponse(e));
+            const response = new ErrorResponse(e);
+            response.correlationId = parent.correlationId;
+            callback(response);
         }
     }
 }

@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", {value: true});
-var MapNode_1 = require("./MapNode");
-var FileContent = (function () {
-    function FileContent(data) {
+const MapNode_1 = require("./MapNode");
+class FileContent {
+    constructor(data) {
         if (!data) {
             return;
         }
@@ -11,17 +11,18 @@ var FileContent = (function () {
             this.rootNode = new MapNode_1.default(data.rootNode);
         }
         else {
-            var parsed = JSON.parse(data);
+            const parsed = JSON.parse(data);
             this.$ = parsed.$;
             this.rootNode = new MapNode_1.default(parsed.rootNode);
         }
     }
 
-    FileContent.prototype.recurseNodes = function (f) {
+    recurseNodes(f) {
         return this.rootNode.recurseNodes(f);
-    };
-    FileContent.prototype.findNodeById = function (id) {
-        var retval = null;
+    }
+
+    findNodeById(id) {
+        let retval = null;
         this.recurseNodes(function (node) {
             if (node.$['ID'] === id) {
                 retval = node;
@@ -29,8 +30,7 @@ var FileContent = (function () {
             }
         });
         return retval;
-    };
-    return FileContent;
-}());
+    }
+}
 exports.default = FileContent;
 //# sourceMappingURL=MapContent.js.map
