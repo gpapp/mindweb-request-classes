@@ -10,6 +10,5 @@ class EditResponse extends AbstractResponse_1.AbstractResponse {
         return this._action;
     }
 }
-exports.EditResponse = EditResponse;
 exports.default = EditResponse;
 //# sourceMappingURL=EditResponse.js.map

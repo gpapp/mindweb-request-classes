@@ -1,24 +1,34 @@
-import {AbstractResponse} from "../response/AbstractResponse";
-import {AbstractMessage} from "../response/AbstractMessage";
+import {AbstractObjectFactory} from "./AbstractObjectFactory";
+import {AbstractMessage} from "../classes/AbstractMessage";
+import TextResponse from "../response/TextResponse";
+import EditResponse from "../response/EditResponse";
+import ErrorResponse from "../response/ErrorResponse";
+import JoinResponse from "../response/JoinResponse";
+import SubscribeResponse from "../response/SubscribeResponse";
+import UnsubscribeResponse from "../response/UnsubscribeResponse";
+/**
+ * Created by gpapp on 2017.02.01..
+ */
+export default class ResponseFactory extends AbstractObjectFactory<AbstractMessage> {
+    initialize() {
+        this.registerClass("TextResponse", TextResponse);
+        this.registerClass("EditResponse", EditResponse);
+        this.registerClass("ErrorResponse", ErrorResponse);
+        this.registerClass("JoinResponse", JoinResponse);
+        this.registerClass("SubscribeResponse", SubscribeResponse);
+        this.registerClass("UnsubscribeResponse", UnsubscribeResponse);
+    }
 
-export default class ResponseFactory {
+    private static _instance;
+
+    static get instance(): ResponseFactory {
+        if (!ResponseFactory._instance) {
+            ResponseFactory._instance = new ResponseFactory();
+        }
+        return ResponseFactory._instance;
+    }
 
     static create(message: string): AbstractMessage {
-        const payload = JSON.parse(message);
-
-        if (!payload.name || !/^[$_a-z][$_a-z0-9.]*$/i.test(payload.name)) {
-            throw new Error("Invalid payload class");
-        }
-        const cmdClass = require("../response/" + payload.name);
-        const newclass = new cmdClass.default();
-        if (!(newclass instanceof AbstractResponse)) {
-            throw new Error("Invalid payload class");
-        }
-        for (let prop  in payload) {
-            if (payload.hasOwnProperty(prop)) {
-                newclass[prop] = payload[prop];
-            }
-        }
-        return newclass;
+        return ResponseFactory.instance.create(message);
     }
 }

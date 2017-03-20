@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const ErrorResponse_1 = require("../response/ErrorResponse");
-class AbstractRequest {
+const AbstractMessage_1 = require("../classes/AbstractMessage");
+class AbstractRequest extends AbstractMessage_1.AbstractMessage {
     get correlationId() {
         return this._correlationId;
     }
@@ -12,7 +13,7 @@ class AbstractRequest {
         return this._sessionId;
     }
     constructor() {
-        this.name = this.constructor.name;
+        super();
     }
     execute(sessionId, userId, service, callback) {
         const parent = this;

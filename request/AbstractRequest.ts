@@ -1,7 +1,8 @@
 import {MindwebService} from "../service/MindwebService";
 import {AbstractResponse} from "../response/AbstractResponse";
 import ErrorResponse from "../response/ErrorResponse";
-export abstract class AbstractRequest {
+import {AbstractMessage} from "../classes/AbstractMessage";
+export abstract class AbstractRequest extends AbstractMessage {
     get correlationId(): string {
         return this._correlationId;
     }
@@ -16,12 +17,11 @@ export abstract class AbstractRequest {
 
     private _correlationId: string;
     private _sessionId: string;
-    private name: string;
 
     protected abstract internalExecute(userId: string, kafkaService: MindwebService, callback: (response: AbstractResponse) => void): void;
 
     constructor() {
-        this.name = this.constructor.name;
+        super();
     }
 
     public execute(sessionId: string, userId: string, service: MindwebService, callback: (response: AbstractResponse) => void): void {

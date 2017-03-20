@@ -1,4 +1,4 @@
-import {AbstractMessage} from "./AbstractMessage";
+import {AbstractMessage} from "../classes/AbstractMessage";
 export abstract class AbstractResponse extends AbstractMessage {
     get correlationId(): string {
         return this._correlationId;

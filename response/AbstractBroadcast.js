@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const AbstractMessage_1 = require("./AbstractMessage");
+const AbstractMessage_1 = require("../classes/AbstractMessage");
 class AbstractBroadcast extends AbstractMessage_1.AbstractMessage {
     constructor() {
         super();

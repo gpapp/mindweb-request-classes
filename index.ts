@@ -17,27 +17,21 @@ import EchoRequest from "./request/EchoRequest";
 import EditRequest from "./request/EditRequest";
 import SubscribeRequest from "./request/SubscribeRequest";
 import UnsubscribeRequest from "./request/UnsubscribeRequest";
-import AbstractMessage from "./response/AbstractMessage";
+import AbstractMessage from "./classes/AbstractMessage";
 import AbstractBroadcast from "./response/AbstractBroadcast";
 import AbstractResponse from "./response/AbstractResponse";
-import EditResponse from "./response/EditResponse";
-import ErrorResponse from "./response/ErrorResponse";
-import JoinResponse from "./response/JoinResponse";
-import PublishedResponse from "./response/PublishedResponse";
-import TextResponse from "./response/TextResponse";
-import SubscribeResponse from "./response/SubscribeResponse";
-import UnsubscribeResponse from "./response/UnsubscribeResponse";
-import MapService from "./service/MapService";
-import ResponseFactory from "./service/ResponseFactory";
+import AbstractObjectFactory from "./service/AbstractObjectFactory";
+import MindwebService from "./service/MindwebService";
 
 export {
+    AbstractMessage,
     EditAction,
+    Friend,
     MapContainer,
     MapContent,
-    MapVersion,
-    Friend,
     MapNode,
     MapNodeCore,
+    MapVersion,
     Persona,
     ServiceError,
     Task,
@@ -49,17 +43,9 @@ export {
     SubscribeRequest,
     UnsubscribeRequest,
 
-    AbstractMessage,
     AbstractBroadcast,
     AbstractResponse,
-    EditResponse,
-    ErrorResponse,
-    JoinResponse,
-    PublishedResponse,
-    SubscribeResponse,
-    UnsubscribeResponse,
-    TextResponse,
 
-    MapService,
-    ResponseFactory,
+    AbstractObjectFactory,
+    MindwebService
 };

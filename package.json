@@ -1,6 +1,6 @@
 {
   "name": "mindweb-request-classes",
-  "version": "0.0.11-beta0017",
+  "version": "0.0.13-beta0001",
   "main": "index.js",
   "typescript": {
     "definition": "index.d.ts"
@@ -8,13 +8,16 @@
   "scripts": {
     "build": "tsc -p src/",
     "prepublish": "tsc",
-    "test": "node test/test.js"
+    "test": "mocha test --recursive"
   },
   "dependencies": {
-    "@types/node": "7.0.8"
   },
   "devDependencies": {
-    "typescript": "~2.2.1"
+    "@types/chai": "^3.4.35",
+    "@types/mocha": "^2.2.40",
+    "typescript": "~2.2.1",
+    "chai": "3.5.0",
+    "mocha": "3.2.0"
   },
   "repository": {
     "type": "git",
