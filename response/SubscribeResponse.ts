@@ -1,16 +1,12 @@
 import {AbstractResponse} from "./AbstractResponse";
-import MapContainer from "../classes/MapContainer";
-import MapContent from "../classes/MapContent";
+import MapVersion from "../classes/MapVersion";
 export default class SubscribeResponse extends AbstractResponse {
-    get mapContainer(): MapContainer {
-        return this._mapContainer;
+    get mapContainer(): MapVersion {
+        return this._mapVersion;
     }
 
-    get mapContent(): MapContent {
-        return this._mapContent;
-    }
 
-    constructor(private _mapContainer: MapContainer, private _mapContent: MapContent) {
+    constructor(private _mapVersion: MapVersion) {
         super();
     }
 }

@@ -2,12 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const AbstractResponse_1 = require("./AbstractResponse");
 class SubscribeResponse extends AbstractResponse_1.AbstractResponse {
-    constructor(_mapContainer) {
+    constructor(_mapVersion) {
         super();
-        this._mapContainer = _mapContainer;
+        this._mapVersion = _mapVersion;
     }
     get mapContainer() {
-        return this._mapContainer;
+        return this._mapVersion;
     }
 }
 exports.default = SubscribeResponse;
