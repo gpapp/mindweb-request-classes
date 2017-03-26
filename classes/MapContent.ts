@@ -1,5 +1,5 @@
 import MapNode from "./MapNode";
-export default class FileContent {
+export default class MapContent {
     public rootNode: MapNode;
     public $;
 

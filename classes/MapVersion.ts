@@ -1,11 +1,11 @@
-import File from "./MapContainer";
-import FileContent from "./MapContent";
-export default class FileVersion {
+import MapContent from "./MapContent";
+import MapContainer from "./MapContainer";
+export default class MapVersion {
     version: number;
-    content: FileContent;
-    file: File;
+    content: MapContent;
+    file: MapContainer;
 
-    constructor(version: number, content: FileContent) {
+    constructor(version: number, content: MapContent) {
         this.version = version;
         this.content = content;
     }

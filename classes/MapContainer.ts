@@ -1,4 +1,4 @@
-export default class File {
+export default class MapContainer {
     id: string;
     name: string;
     owner: string;

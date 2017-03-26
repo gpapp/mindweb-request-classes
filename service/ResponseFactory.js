@@ -19,7 +19,6 @@ class ResponseFactory extends AbstractObjectFactory_1.AbstractObjectFactory {
         this.registerClass("SubscribeResponse", SubscribeResponse_1.default);
         this.registerClass("UnsubscribeResponse", UnsubscribeResponse_1.default);
     }
-
     static get instance() {
         if (!ResponseFactory._instance) {
             ResponseFactory._instance = new ResponseFactory();
