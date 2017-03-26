@@ -16,3 +16,12 @@ It also allows to use implementations of the classes, should it be required for
 the application. (Eg. request.execute on server side)
 
 It tries to mimic dynamic class loading available in OOP languages.
+
+### Extending request classes
+
+Make sure you use the line
+
+``this['_name']=super.constructor.name;``
+
+in the constructor of the implementing class, to avoid using the actual 
+implementation class name in the serialized message.
