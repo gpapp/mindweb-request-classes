@@ -1,7 +1,7 @@
 import {AbstractResponse} from "./AbstractResponse";
 import MapVersion from "../classes/MapVersion";
 export default class SubscribeResponse extends AbstractResponse {
-    get mapContainer(): MapVersion {
+    get mapVersion(): MapVersion {
         return this._mapVersion;
     }
 

@@ -1,7 +1,8 @@
 import MapNode from "../classes/MapNode";
 import FileContent from "../classes/MapContent";
-import EditAction from "../classes/EditAction";
+import EditAction, {ActionNames} from "../classes/EditAction";
 import ServiceError from "../classes/ServiceError";
+
 export default class MapService {
     static findNodeById(node: MapNode, nodeId: string): MapNode {
         if (node.$['ID'] === nodeId) {
@@ -29,38 +30,38 @@ export default class MapService {
             return;
         }
         switch (action.event) {
-            case 'nodeFold':
+            case ActionNames.nodeFold:
                 eventNode.open = action.payload;
                 break;
-            case 'nodeDetailFold':
+            case ActionNames.nodeDetailFold:
                 eventNode.detailOpen = action.payload;
                 break;
-            case 'nodeText':
+            case ActionNames.nodeText:
                 eventNode.nodeMarkdown = action.payload;
                 break;
-            case 'nodeDetail':
+            case ActionNames.nodeDetail:
                 eventNode.detailMarkdown = action.payload;
                 break;
-            case 'nodeNote':
+            case ActionNames.nodeNote:
                 eventNode.noteMarkdown = action.payload;
                 break;
-            case 'nodeModifyIcons':
+            case ActionNames.nodeModifyIcons:
                 eventNode.icon = action.payload;
                 break;
-            case 'nodeSetAttribute':
+            case ActionNames.nodeSetAttribute:
                 eventNode.addAttribute(action.payload.name, action.payload.value);
                 break;
-            case 'nodeRemoveAttribute':
+            case ActionNames.nodeRemoveAttribute:
                 eventNode.removeAttribute(action.payload.name);
                 break;
-            case 'newNode':
+            case ActionNames.newNode:
                 // TODO: sanitize node, add proper ids
                 if (!eventNode.node) {
                     eventNode.node = [];
                 }
                 eventNode.node.push(action.payload);
                 break;
-            case 'deleteNode':
+            case ActionNames.deleteNode:
                 //TODO delete eventNode;
                 for (let i = 0; i < eventNode.node.length; i++) {
                     if (eventNode.node[i].$['ID'] === action.payload) {
@@ -73,7 +74,7 @@ export default class MapService {
                     delete eventNode.open;
                 }
                 break;
-            case 'nodeMove':
+            case ActionNames.nodeMove:
                 const elementId: string = action.payload['elementId'];
                 const fromIndex: number = action.payload['fromIndex'];
                 const toParentId: string = action.payload['toParentId'];
