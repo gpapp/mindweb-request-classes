@@ -20,8 +20,8 @@ export abstract class AbstractRequest extends AbstractMessage {
 
     protected abstract internalExecute(userId: string, kafkaService: MindwebService, callback: (response: AbstractResponse) => void): void;
 
-    constructor() {
-        super();
+    constructor(fileId: string) {
+        super(fileId);
     }
 
     public execute(sessionId: string, userId: string, service: MindwebService, callback: (response: AbstractResponse) => void): void {

@@ -12,8 +12,8 @@ export abstract class AbstractResponse extends AbstractMessage {
 
     private _correlationId: string;
 
-    constructor() {
-        super();
+    constructor(fileId: string) {
+        super(fileId);
     }
 }
 export default AbstractResponse;

@@ -9,14 +9,10 @@ import {MindwebService} from "../service/MindwebService";
 
 class TestResponse extends AbstractResponse {
     constructor() {
-        super();
+        super("DUMMY");
     }
 }
 class TestComplexResponse extends AbstractResponse {
-    get strParam() {
-        return this._strParam
-    }
-
     get strArrParam() {
         return this._strArrParam
     }
@@ -33,36 +29,33 @@ class TestComplexResponse extends AbstractResponse {
         return this._numberParam
     }
 
-    constructor(private _strParam: string,
+    constructor(_strParam: string,
                 private _strArrParam: string[],
                 private _boolParam: boolean,
                 private _dateParam: Date,
                 private _numberParam: number) {
-        super();
+        super(_strParam);
     }
 }
 abstract class TestRequest extends AbstractRequest {
 
 }
 class TestRequestImpl1 extends TestRequest {
-    constructor(private _strParam: string, private _strArrParam: string[]) {
-        super();
+    constructor(_strParam: string, private _strArrParam: string[]) {
+        super(_strParam);
     }
 
     protected internalExecute(userId: string, kafkaService: MindwebService, callback: (response: AbstractResponse) => void): void {
     }
 }
 class TestRequestImpl2 extends TestRequest {
-    get strParam() {
-        return this._strParam
-    }
 
     get strArrParam() {
         return this._strArrParam
     }
 
-    constructor(private _strParam: string, private _strArrParam: string[],) {
-        super();
+    constructor(_strParam: string, private _strArrParam: string[],) {
+        super(_strParam);
     }
 
     protected internalExecute(userId: string, kafkaService: MindwebService, callback: (response: AbstractResponse) => void): void {

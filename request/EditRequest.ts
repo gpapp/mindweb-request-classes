@@ -1,16 +1,13 @@
-import {EchoRequest} from "./EchoRequest";
 import EditAction from "../classes/EditAction";
-export abstract class EditRequest extends EchoRequest {
-    get fileId(): string {
-        return this._fileId;
-    }
+import {AbstractRequest} from "./AbstractRequest";
+export abstract class EditRequest extends AbstractRequest {
 
     get action(): EditAction {
         return this._action;
     }
 
-    constructor(private _fileId: string, private _action: EditAction) {
-        super();
+    constructor(_fileId: string, private _action: EditAction) {
+        super(_fileId);
     }
 }
 export default EditRequest;

@@ -1,6 +1,5 @@
 import {AbstractObjectFactory} from "./AbstractObjectFactory";
 import {AbstractMessage} from "../classes/AbstractMessage";
-import TextResponse from "../response/TextResponse";
 import EditResponse from "../response/EditResponse";
 import ErrorResponse from "../response/ErrorResponse";
 import JoinResponse from "../response/JoinResponse";
@@ -11,7 +10,6 @@ import UnsubscribeResponse from "../response/UnsubscribeResponse";
  */
 export default class ResponseFactory extends AbstractObjectFactory<AbstractMessage> {
     initialize() {
-        this.registerClass("TextResponse", TextResponse);
         this.registerClass("EditResponse", EditResponse);
         this.registerClass("ErrorResponse", ErrorResponse);
         this.registerClass("JoinResponse", JoinResponse);

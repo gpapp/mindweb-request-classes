@@ -2,13 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const AbstractResponse_1 = require("./AbstractResponse");
 class JoinResponse extends AbstractResponse_1.AbstractResponse {
-    constructor(_userId, _fileId) {
-        super();
+    constructor(_fileId, _userId) {
+        super(_fileId);
         this._userId = _userId;
-        this._fileId = _fileId;
-    }
-    get fileId() {
-        return this._fileId;
     }
     get userId() {
         return this._userId;

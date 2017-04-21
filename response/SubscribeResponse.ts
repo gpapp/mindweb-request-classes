@@ -7,6 +7,6 @@ export default class SubscribeResponse extends AbstractResponse {
 
 
     constructor(private _mapVersion: MapVersion) {
-        super();
+        super(_mapVersion ? _mapVersion.container.id : null);
     }
 }

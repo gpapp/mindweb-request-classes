@@ -6,6 +6,6 @@ export default class UnsubscribeResponse extends AbstractResponse {
     }
 
     constructor(private _mapContainer: MapContainer) {
-        super();
+        super(_mapContainer ? _mapContainer.id : null);
     }
 }

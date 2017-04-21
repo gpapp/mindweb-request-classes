@@ -1,7 +1,11 @@
 export abstract class AbstractMessage extends Object {
     private name: string;
 
-    constructor() {
+    get fileId(): string {
+        return this._fileId;
+    }
+
+    constructor(private _fileId: string) {
         super();
         this.name = this.constructor.name;
     }

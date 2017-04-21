@@ -1,6 +1,6 @@
 {
   "name": "mindweb-request-classes",
-  "version": "0.0.13-beta0011",
+  "version": "0.0.14-beta0002",
   "main": "index.js",
   "typescript": {
     "definition": "index.d.ts"

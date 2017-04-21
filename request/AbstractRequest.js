@@ -12,8 +12,8 @@ class AbstractRequest extends AbstractMessage_1.AbstractMessage {
     get sessionId() {
         return this._sessionId;
     }
-    constructor() {
-        super();
+    constructor(fileId) {
+        super(fileId);
     }
     execute(sessionId, userId, service, callback) {
         const parent = this;

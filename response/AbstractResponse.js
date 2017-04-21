@@ -8,8 +8,8 @@ class AbstractResponse extends AbstractMessage_1.AbstractMessage {
     set correlationId(value) {
         this._correlationId = value;
     }
-    constructor() {
-        super();
+    constructor(fileId) {
+        super(fileId);
     }
 }
 exports.AbstractResponse = AbstractResponse;

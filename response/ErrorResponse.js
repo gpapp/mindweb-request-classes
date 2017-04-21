@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const AbstractResponse_1 = require("./AbstractResponse");
 class ErrorResponse extends AbstractResponse_1.AbstractResponse {
     constructor(e) {
-        super();
+        super(null);
         this.result = "error";
         if (e) {
             this.errorName = e.name;

@@ -13,7 +13,6 @@ import ServiceError from "./classes/ServiceError";
 import Task from "./classes/Task";
 import User from "./classes/User";
 import AbstractRequest from "./request/AbstractRequest";
-import EchoRequest from "./request/EchoRequest";
 import EditRequest from "./request/EditRequest";
 import SubscribeRequest from "./request/SubscribeRequest";
 import UnsubscribeRequest from "./request/UnsubscribeRequest";
@@ -38,7 +37,6 @@ export {
     User,
 
     AbstractRequest,
-    EchoRequest,
     EditRequest,
     SubscribeRequest,
     UnsubscribeRequest,
